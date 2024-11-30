@@ -20,7 +20,7 @@ export interface Project {
 };
 
 export interface AboutProps {
-    description: string[];
+    description?: string;
 }
 
 export interface CategoryProps {
