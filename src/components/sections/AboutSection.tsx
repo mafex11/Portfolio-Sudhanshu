@@ -48,15 +48,14 @@ const AboutSection = () => {
                         <>
                             {data.map((item: AboutProps, index: number) => (
                                 <p key={index} className="flex flex-col w-full text-base text-justify lg:text-start lg:leading-8 text-neutral-200">
-                                    {item.description && typeof item.description === 'string' && item.description.split('\n').map((line: string, lineIndex: number) => (
-                                    <React.Fragment key={lineIndex}>
-                                        {line}
-                                        {lineIndex !== item.description.length - 1 && (
-                                            <span className="w-full h-4 bg-transparent" />
-                                        )}
-                                    </React.Fragment>
-                                ))}
-
+                                    {item.description?.split('\n').map((line: string, lineIndex: number, array: string[]) => (
+                                        <React.Fragment key={lineIndex}>
+                                            {line}
+                                            {lineIndex !== array.length - 1 && (
+                                                <span className="w-full h-4 bg-transparent" />
+                                            )}
+                                        </React.Fragment>
+                                    ))}
                                 </p>
                             ))}
                         </>
@@ -120,4 +119,4 @@ const AboutSection = () => {
     )
 };
 
-export default AboutSection
+export default AboutSection;

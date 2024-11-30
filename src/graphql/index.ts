@@ -83,7 +83,7 @@ export const getClient = async (object: ClientProps) => {
     console.log("result:", result, result.json());
 
     return result;
-    // const result = await axios.post('/api/contact', object);
+    // const result = await axios.post('/api/contact', object); 
 
     // return result;
 };

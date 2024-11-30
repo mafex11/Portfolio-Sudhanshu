@@ -21,9 +21,9 @@ const ContactMe = () => {
 
     const form = useForm<FormValues>({
         resolver: zodResolver(FormValidator),
-        mode: 'onBlur',
+        mode: 'onBlur', 
         defaultValues: {
-            name: '',
+            name: '', 
             email: '',
             phone: '',
             message: '',
@@ -84,23 +84,23 @@ const ContactMe = () => {
 
             <div className="flex flex-col items-center justify-center w-full">
                 <div className="flex flex-col items-center justify-center w-full gap-5 mb-8 lg:flex-row">
-                    <Link href="mailto:sihasaneshreyas@gmail.com" className="flex-[0.5] w-full lg:w-auto">
+                    <Link href="mailto:sudhanshuk1140@gmail.com" className="flex-[0.5] w-full lg:w-auto">
                         <Button type='button' variant="outline" className="flex-col items-start w-full h-auto p-5 hover:scale-100">
                             <h6 className="text-base font-medium text-white">
                                 Email
                             </h6>
                             <p className="mt-2 text-base text-neutral-300">
-                                sihasaneshreyas@gmail.com
+                                sudhanshuk1140@gmail.com
                             </p>
                         </Button>
                     </Link>
-                    <Link href="https://wa.link/c8re0h" className="flex-[0.5] w-full lg:w-auto">
+                    <Link href="https://wa.me/+919328261868" className="flex-[0.5] w-full lg:w-auto">
                         <Button type='button' variant="outline" className="flex-col items-start w-full h-auto p-5 hover:scale-100">
                             <h6 className="text-base font-medium text-white">
                                 Phone
                             </h6>
                             <p className="mt-2 text-base text-neutral-300">
-                                +91 932 235 63 92
+                                +91 9328261868
                             </p>
                         </Button>
                     </Link>
