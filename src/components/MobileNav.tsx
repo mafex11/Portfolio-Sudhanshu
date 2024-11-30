@@ -38,7 +38,7 @@ const MobileNav = () => {
 
                 <Link href="/">
                     <h2 className="text-lg font-semibold text-white">
-                        Shreyas
+                        Sudhanshu
                     </h2>
                 </Link>
 
