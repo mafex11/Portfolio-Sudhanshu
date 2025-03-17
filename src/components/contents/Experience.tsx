@@ -46,8 +46,8 @@ const Experience = () => {
                 </TimeLineItem.Title>
                 
                 <TimeLineItem.Description>
-                •   Developed and implemented front-end and back-end solutions for various projects
-                within OneRoot's Agri-Tech team, including developing POCs for new features, demonstrating proficiency in full-stack development
+                 •   Developed and implemented front-end and back-end solutions for various projects
+                 within OneRoot&apos;s Agri-Tech team, including developing POCs for new features, demonstrating proficiency in full-stack development.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
                 •   Contributed to the development of user-friendly dashboards and successfully
