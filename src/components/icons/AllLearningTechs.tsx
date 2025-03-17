@@ -105,21 +105,7 @@ const AllLearningTechs = () => {
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>
-                    <motion.li
-                        variants={animation}
-                        className="opacity-100"
-                    >
-                        <Tooltip>
-                            <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#FFF]">
-                                    <SiExpo className="w-6 h-6" />
-                                </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                <p>Expo</p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </motion.li>
+                    
                     <motion.li
                         variants={animation}
                         className="opacity-100"

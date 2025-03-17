@@ -9,7 +9,7 @@ export const skills = [
     },
     {
         title: "Javascript Libraries",
-        stack: ["React Query", "Zustand", "Emotion", "Axios", ]
+        stack: ["React Query", "Emotion", "Axios", ]
     },
     {
         title: "CSS Styling & Motion Libraries",
@@ -21,7 +21,7 @@ export const skills = [
     },
     {
         title: "Databases",
-        stack: ["MongoDB", "Firebase", "PostgreSQL", "NeonDB", "MySQL"],
+        stack: ["MongoDB", "Firebase", "PostgreSQL", "MySQL"],
     },
     {
         title: "Software & Tools",
@@ -29,6 +29,6 @@ export const skills = [
     },
     {
         title: "Currently Learning & Exploring",
-        stack: ["Vite", "SWR", "Redis", "Eslint", "Socket.io", "Docker", "AWS", "React Testing Library", "Tailwind JIT", "Terraform"]
+        stack: ["Vite", "Eslint", "Socket.io", "Docker", "AWS", "React Testing Library", "Tailwind JIT"]
     }
 ];

@@ -16,6 +16,7 @@ import { cn } from '@/lib/utils';
 import axios, { AxiosError } from 'axios';
 import { motion } from 'framer-motion';
 import { toast } from "sonner";
+import emailjs from 'emailjs-com';
 
 const ContactMe = () => {
 
@@ -46,15 +47,20 @@ const ContactMe = () => {
                 message
             };
 
-            const { data } = await axios.post('/api/contact', payload);
+            await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                name,
+                email,
+                phone,
+                message
+            }, 'YOUR_USER_ID');
 
-            return data;
+            return payload;
         },
         onError: (error) => {
             if (error instanceof AxiosError) {
-                console.error(error.message);
+                console.error("Error details:", error.response?.data);
                 toast("Something went wrong!", {
-                    description: "Unable to send message, please try again.",
+                    description: error.response?.data?.errors[0]?.message || "Unable to send message, please try again.",
                 });
             }
         },
