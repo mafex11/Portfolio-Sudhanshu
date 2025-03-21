@@ -23,7 +23,7 @@ const Card = ({ project }: Props) => {
                         {project?.description}
                     </p>
                     <div className="flex flex-col lg:flex-row items-start justify-start space-y-4 lg:space-y-0 lg:justify-between w-full">
-                        <div className="flex items-center justify-start flex-wrap gap-2">
+                        {/* <div className="flex items-center justify-start flex-wrap gap-2">
                             {project?.stack?.map((item, index) => (
                                 <Badge
                                     key={index}
@@ -38,7 +38,7 @@ const Card = ({ project }: Props) => {
                                     </span>
                                 </Badge>
                             ))}
-                        </div>
+                        </div> */}
                         <div className="flex items-end gap-4">
                             <Link href={project.github} target="_blank">
                                 <Button variant="outline" size="sm">
