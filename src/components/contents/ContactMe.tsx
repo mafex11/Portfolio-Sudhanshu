@@ -13,7 +13,6 @@ import SendButton from '../ui/SendButton';
 import { Textarea } from '../ui/Textarea';
 import AnimationContainer from '../utils/AnimationContainer';
 import { cn } from '@/lib/utils';
-import axios, { AxiosError } from 'axios';
 import { motion } from 'framer-motion';
 import { toast } from "sonner";
 import emailjs from 'emailjs-com';
@@ -47,22 +46,30 @@ const ContactMe = () => {
                 message
             };
 
-            await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-                name,
-                email,
-                phone,
-                message
-            }, 'YOUR_USER_ID');
+            // EmailJS configuration
+            const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_default';
+            const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_default';
+            const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'your_public_key';
+
+            // Template parameters for EmailJS
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                from_phone: phone,
+                message: message,
+                to_email: 'sudhanshuk1140@gmail.com',
+                reply_to: email,
+            };
+
+            await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
             return payload;
         },
         onError: (error) => {
-            if (error instanceof AxiosError) {
-                console.error("Error details:", error.response?.data);
-                toast("Something went wrong!", {
-                    description: error.response?.data?.errors[0]?.message || "Unable to send message, please try again.",
-                });
-            }
+            console.error("EmailJS Error:", error);
+            toast("Something went wrong!", {
+                description: "Unable to send message, please try again.",
+            });
         },
         onSuccess: () => {
             form.reset();

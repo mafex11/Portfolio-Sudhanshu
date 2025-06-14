@@ -7,16 +7,21 @@ const Experience = () => {
             <TimeLineItem active>
                 <TimeLineItem.Title>
                     <span className="font-medium transition-all hover:text-white hover:underline hover:underline-offset-2">
-                       Improving my skills and developing projects (Levelling up)
+                       Software Engineer at PuntPartners 
                     </span>
                     {" "}•{" "}
                     <span className="text-neutral-200">
-                        November 2024 - Now
+                        April 2024 - Now
                     </span>
                 </TimeLineItem.Title>
                 <TimeLineItem.Description>
-                   Working on fullstack projects and developing ai agents, constantly improving myself as a developer and seeking new opportunities to learn and grow.
+                Reverse Engineered the API’s of Q-Commerce platforms to create a Crawler system for scraping API’s from
+                Q-Commerce platforms for both Desktop and Mobile platforms which brought in 1000+ new users to the platform.
                 </TimeLineItem.Description>
+                <TimeLineItem.Description>
+                Developed features for TolMol App that allows users to search for products and compare prices across different platforms.
+                </TimeLineItem.Description>
+                
             </TimeLineItem>
 
             {/* <TimeLineItem active>
