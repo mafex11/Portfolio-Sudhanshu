@@ -10,7 +10,7 @@ const AbuotMe = () => {
             </h2>
 
             <p className='w-full text-base font-normal leading-7 text-justify text-neutral-200'>
-                I am currently 3rd year student studying <strong>Computer Science</strong>. Beyond leetcode and dsa, I craft engaging and responsive web applications using <strong>React</strong> and delve into mobile app development with <strong>React Native and expo</strong>. Apart from coding, I express my creative side by designing sleek interfaces using <strong>Figma</strong>. Let&apos;s build something amazing together! ✨
+                I am currently 4th year student studying <strong>Computer Science</strong>. Beyond leetcode and dsa, I craft engaging and responsive web applications using <strong>React</strong> and delve into mobile app development with <strong>React Native and expo</strong>. Apart from coding, I express my creative side by designing sleek interfaces using <strong>Figma</strong>. Let&apos;s build something amazing together! ✨
             </p>
 
         </AnimationContainer>
