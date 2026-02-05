@@ -47,7 +47,7 @@ const AboutSection = () => {
                     ) : (
                         <>
                             {data.map((item: AboutProps, index: number) => (
-                                <p key={index} className="flex flex-col w-full text-base text-justify lg:text-start lg:leading-8 text-neutral-200">
+                                <p key={index} className="flex flex-col w-full text-base text-justify lg:text-start lg:leading-8 text-muted-foreground">
                                     {item.description?.split('\n').map((line: string, lineIndex: number, array: string[]) => (
                                         <React.Fragment key={lineIndex}>
                                             {line}
@@ -69,7 +69,7 @@ const AboutSection = () => {
                 <div className="w-full mt-8">
                     <AnimationContainer customClassName="w-full flex flex-col">
                         <div className="flex justify-center w-full md:justify-start">
-                            <h2 className='mb-8 text-2xl font-bold tracking-tight text-center text-white lg:text-start'>
+                            <h2 className='mb-8 text-2xl font-bold tracking-tight text-center text-foreground lg:text-start'>
                                 Future Endeavors
                             </h2>
                         </div>
@@ -82,7 +82,7 @@ const AboutSection = () => {
                                     bounce: 0.25,
                                     delay: 0.2,
                                 }}
-                                className="text-base leading-8 text-neutral-200"
+                                className="text-base leading-8 text-muted-foreground"
                             >
                                 Looking ahead, I&apos;m excited about creating 3D websites. I want to make online spaces that feel more real and fun for users.
                             </motion.p>
@@ -94,7 +94,7 @@ const AboutSection = () => {
                                     bounce: 0.25,
                                     delay: 0.3,
                                 }}
-                                className="text-base leading-8 text-neutral-200"
+                                className="text-base leading-8 text-muted-foreground"
                             >
                                 I&apos;m also curious about machine learning, which is like teaching computers to learn and do smart things. I dream of building smart systems that work hand-in-hand with people, making tech a helpful companion in our daily lives.
                             </motion.p>
@@ -106,7 +106,7 @@ const AboutSection = () => {
                                     bounce: 0.25,
                                     delay: 0.4,
                                 }}
-                                className="text-base leading-8 text-neutral-200"
+                                className="text-base leading-8 text-muted-foreground"
                             >
                                 As part of my coding adventure, I hope to join others in creating cool projects together. I want to be a part of the worldwide community of developers, learn lots, and bring some exciting ideas to life.
                             </motion.p>

@@ -13,7 +13,7 @@ const Searchbar = ({ searchQuery, handleSearch }: Props) => {
 
             <div className="relative w-full">
 
-                <LuSearch className="absolute left-3 top-2.5 transform w-5 h-5 text-neutral-500" />
+                <LuSearch className="absolute left-3 top-2.5 transform w-5 h-5 text-muted-foreground" />
 
                 <Input
                     type="text"

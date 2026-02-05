@@ -7,11 +7,11 @@ const Experience = () => {
             <TimeLineItem active>
                 
                 <TimeLineItem.Title>
-                    <span className="font-medium transition-all hover:text-white hover:underline hover:underline-offset-2 text-blue-600">
+                    <span className="font-medium transition-all hover:text-foreground hover:underline hover:underline-offset-2 text-blue-600">
                        Software Engineer at BusinessRoom 
                     </span>
                     {" "}•{" "}
-                    <span className="text-neutral-200">
+                    <span className="text-muted-foreground">
                         July 2025 - Now
                     </span>
                 </TimeLineItem.Title>
@@ -38,11 +38,11 @@ const Experience = () => {
             <TimeLineItem last>
                 
                 <TimeLineItem.Title>
-                    <span className="font-medium transition-all hover:text-white hover:underline hover:underline-offset-2 text-blue-600">
+                    <span className="font-medium transition-all hover:text-foreground hover:underline hover:underline-offset-2 text-blue-600">
                        Software Developer Engineer Intern at PuntPartners 
                     </span>
                     {" "}•{" "}
-                    <span className="text-neutral-200">
+                    <span className="text-muted-foreground">
                         April 2025 - June 2025
                     </span>
                 </TimeLineItem.Title>
@@ -73,11 +73,11 @@ const Experience = () => {
         <p className='mt-2'></p>
             <TimeLineItem last>
                 <TimeLineItem.Title>
-                    <span className="font-medium transition-all hover:text-white hover:underline hover:underline-offset-2 text-blue-600">
+                    <span className="font-medium transition-all hover:text-foreground hover:underline hover:underline-offset-2 text-blue-600">
                     FullStack Engineer Intern at OneRoot
                     </span>
                     {" "}•{" "}
-                    <span className="text-neutral-200">
+                    <span className="text-muted-foreground">
                     August 2024 - November 2024
                     </span>
                 </TimeLineItem.Title>

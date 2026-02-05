@@ -22,28 +22,28 @@ const Footer = () => {
     return (
         <footer className="flex flex-col items-center justify-center w-full mx-auto lg:max-w-screen-md">
 
-            <hr className="w-full h-px border border-neutral-900" />
+            <hr className="w-full h-px border border-border" />
 
             <AnimationContainer customClassName="w-full grid grid-cols-3 place-items-center gap-2 lg:gap-4 mx-4 py-12 lg:py-8">
 
                 <div className="flex flex-col space-y-4">
 
                     <MotionButton href="/" delay={0}>
-                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70">
+                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-muted-foreground hover:text-foreground">
                             <GoHomeFill className="inline-block w-5 h-5 mr-2" />
                             Home
                         </Button>
                     </MotionButton>
 
                     <MotionButton href="/about" delay={0.5}>
-                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70">
+                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-muted-foreground hover:text-foreground">
                             <IoPerson className="inline-block w-5 h-5 mr-2" />
                             About
                         </Button>
                     </MotionButton>
 
                     <MotionButton href="/projects" delay={1}>
-                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70">
+                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-muted-foreground hover:text-foreground">
                             <IoBrowsers className="inline-block w-5 h-5 mr-2" />
                             Projects
                         </Button>
@@ -54,21 +54,21 @@ const Footer = () => {
                 <div className="flex flex-col space-y-4">
 
                     <MotionButton href="/blog" delay={0}>
-                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70">
+                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-muted-foreground hover:text-foreground">
                             <IoBook className="inline-block w-5 h-5 mr-2" />
                             Blog
                         </Button>
                     </MotionButton>
 
                     <MotionButton href="/contact" delay={0.5}>
-                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70">
+                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-muted-foreground hover:text-foreground">
                             <IoMail className="inline-block w-5 h-5 mr-2" />
                             Contact
                         </Button>
                     </MotionButton>
 
                     <MotionButton href="/notes" delay={1}>
-                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70">
+                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-muted-foreground hover:text-foreground">
                             <HiMiniDocumentText className="inline-block w-5 h-5 mr-2" />
                             Notes
                         </Button>
@@ -78,21 +78,21 @@ const Footer = () => {
                 <div className="flex flex-col h-full space-y-4">
 
                     <MotionButton href="https://github.com/mafex11/" target="_blank" delay={0}>
-                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70">
+                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-muted-foreground hover:text-foreground">
                             <FaGithub className="inline-block w-5 h-5 mr-2" />
                             GitHub
                         </Button>
                     </MotionButton>
 
                     <MotionButton href="https://www.linkedin.com/in/sudhanshu-pandit-17a126240/" target="_blank" delay={0.5}>
-                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70">
+                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-muted-foreground hover:text-foreground">
                             <IoBriefcase className="inline-block w-5 h-5 mr-2" />
                             LinkedIn
                         </Button>
                     </MotionButton>
 
                     <MotionButton href="#" delay={1} target="_blank" download>
-                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70" onClick={handleDownload}>
+                        <Button variant="ghost" size="sm" className="font-normal transition ease-out text-muted-foreground hover:text-foreground" onClick={handleDownload}>
                             <IoDocumentText className="inline-block w-5 h-5 mr-2" />
                             My CV
                         </Button>

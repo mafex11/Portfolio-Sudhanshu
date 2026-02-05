@@ -32,11 +32,11 @@ const GradientBackground = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <AnimationContainer>
-            <div className="min-h-screen w-full bg-[#080809]">
+            <div className="min-h-screen w-full bg-background">
 
-                <div className="absolute inset-0 z-[20] bg-grid-neutral-600/20 hidden lg:flex"></div>
+                <div className="absolute inset-0 z-[20] bg-grid-neutral-400/40 hidden lg:flex dark:bg-grid-neutral-600/20"></div>
 
-                <div className="absolute z-[20] inset-0 items-center justify-center bg-[#080809] [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)] hidden lg:flex"></div>
+                <div className="absolute z-[20] inset-0 items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)] hidden lg:flex"></div>
 
                 <motion.div
                     initial={{ opacity: 0 }}

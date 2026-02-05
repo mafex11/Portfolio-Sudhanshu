@@ -7,16 +7,16 @@ const MySkills = () => {
         <AnimationContainer customClassName='w-full py-12 lg:py-16'>
 
             <div className="flex justify-center md:justify-start">
-                <h2 className='mb-8 text-2xl font-bold tracking-tight text-center text-white lg:text-start'>
+                <h2 className='mb-8 text-2xl font-bold tracking-tight text-center text-foreground lg:text-start'>
                     Skills & Tools
                 </h2>
             </div>
 
-            <p className='mb-4 text-justify lg:leading-7 text-neutral-200 lg:text-start'>
+            <p className='mb-4 text-justify lg:leading-7 text-muted-foreground lg:text-start'>
                 A creative problem solver with over 4 years of programming experience, I&apos;ve explored diverse programming languages, libraries, and technology stacks, honing my skills in both Frontend, Backend, and App development.
             </p>
 
-            <p className='text-justify lg:leading-7 text-neutral-200 lg:text-start'>
+            <p className='text-justify lg:leading-7 text-muted-foreground lg:text-start'>
                 Eager to learn and adept at adopting new technologies, I thrive on expanding my skill set in the ever-evolving tech landscape.
             </p>
 
@@ -25,7 +25,7 @@ const MySkills = () => {
                     {skills?.map(({ title, stack }) => (
                         <AnimationContainer key={title} customClassName="flex fex-col items-center">
                             <div>
-                                <h3 className="items-start mb-3 text-lg font-bold text-white">
+                                <h3 className="items-start mb-3 text-lg font-bold text-foreground">
                                     {title}
                                 </h3>
                                 <div className="flex flex-wrap items-center gap-4 mb-5">

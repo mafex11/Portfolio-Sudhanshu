@@ -194,7 +194,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ blog, ...rest }) =>
                     </React.Fragment>)}
                 </li>
             case 'paragraph':
-                return <p key={index} className="text-gray-700 font-medium my-4">
+                return <p key={index} className="text-muted-foreground font-medium my-4">
                     {modifiedText.map((item: any, i: any) =>
                         <React.Fragment key={i}>
                             {item}
@@ -359,7 +359,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ blog, ...rest }) =>
 
     return (
         <div className="mb-8 lg:py-8 lg:pb-16 w-full pb-12">
-            <div className="px-4 lg:px-0 text-neutral-200">
+            <div className="px-4 lg:px-0 text-muted-foreground">
                 {blog?.content.raw.children?.map((typeObj: any, index: any) => {
                     const children = typeObj.children?.map((item: any, itemIndex: any) => getContentFragment(itemIndex, item.text, item, ''));
 

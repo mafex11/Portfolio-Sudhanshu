@@ -16,6 +16,7 @@ import { Toaster } from "./ui/Sonner";
 import { Skeleton } from "./ui/Skeleton";
 import CodeBlock from "./ui/CodeBlock";
 import Loader from "./ui/Loader";
+import ThemeToggle from "./ui/ThemeToggle";
 
 import AnimationContainer from "./utils/AnimationContainer";
 import GradientBackground from "./utils/GradientBackground";
@@ -103,5 +104,6 @@ export {
     MarkdownRenderer,
     CodeBlock,
     Loader,
-    ContactSection
+    ContactSection,
+    ThemeToggle
 }

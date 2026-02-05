@@ -17,7 +17,7 @@ const AllLearningTechs = () => {
                 initial={animation.hide}
                 animate={animation.show}
                 transition={{ delay: 0.2 }}
-                className="mb-3 text-base text-center text-neutral-300 lg:text-start"
+                className="mb-3 text-base text-center text-muted-foreground lg:text-start"
             >
                 I am currently working or interested in learning:
             </motion.p>
@@ -36,7 +36,7 @@ const AllLearningTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#1F1F1F]">
+                                <div className="transition duration-300 ease-out text-muted-foreground hover:text-[#1F1F1F]">
                                     <SiFramer className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
@@ -51,7 +51,7 @@ const AllLearningTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#764ABC]">
+                                <div className="transition duration-300 ease-out text-muted-foreground hover:text-[#764ABC]">
                                     <SiRedux className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
@@ -66,7 +66,7 @@ const AllLearningTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#FFF]">
+                                <div className="transition duration-300 ease-out text-muted-foreground hover:text-foreground">
                                     <SiSocketdotio className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
@@ -81,7 +81,7 @@ const AllLearningTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#00BFFF]">
+                                <div className="transition duration-300 ease-out text-muted-foreground hover:text-[#00BFFF]">
                                     <SiTrpc className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
@@ -96,7 +96,7 @@ const AllLearningTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#FF4154]">
+                                <div className="transition duration-300 ease-out text-muted-foreground hover:text-[#FF4154]">
                                     <SiReactquery className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
@@ -112,7 +112,7 @@ const AllLearningTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#3880FF]">
+                                <div className="transition duration-300 ease-out text-muted-foreground hover:text-[#3880FF]">
                                     <SiIonic className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
@@ -127,7 +127,7 @@ const AllLearningTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#336791]">
+                                <div className="transition duration-300 ease-out text-muted-foreground hover:text-[#336791]">
                                     <SiPostgresql className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
@@ -142,7 +142,7 @@ const AllLearningTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#DC382D]">
+                                <div className="transition duration-300 ease-out text-muted-foreground hover:text-[#DC382D]">
                                     <SiRedis className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
@@ -157,7 +157,7 @@ const AllLearningTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#FF9900]">
+                                <div className="transition duration-300 ease-out text-muted-foreground hover:text-[#FF9900]">
                                     {/* <SiAmazonaws className="w-6 h-6" /> */}
                                 </div>
                             </TooltipTrigger>

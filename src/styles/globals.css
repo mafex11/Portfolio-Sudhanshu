@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  .dark {
-    --main-background: 240, 6%, 3%;
+  :root {
+    --main-background: 0 0% 100%;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
@@ -35,7 +35,9 @@
 
     --radius: 0.5rem;
   }
-  :root {
+
+  .dark {
+    --main-background: 240 6% 3%;
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
@@ -110,16 +112,22 @@ option {
 
 .flare {
   position: fixed;
-  border: 2px solid #ffffff2b;
+  border: 2px solid #0f172a4d;
   border-radius: 50%;
-  mix-blend-mode: screen;
+  mix-blend-mode: normal;
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 99999999 !important;
   backdrop-filter: blur(1px);
-  background-color: #0000005e;
+  background-color: #0f172a33;
   transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
   cursor: none !important;
+}
+
+.dark .flare {
+  border: 2px solid #ffffff2b;
+  mix-blend-mode: screen;
+  background-color: #0000005e;
 }
 
 @media screen and (max-width: 768px) {

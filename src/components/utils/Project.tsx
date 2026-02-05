@@ -30,13 +30,13 @@ const Project = ({ project }: Props) => {
     };
 
     return (
-        <AnimationContainer customClassName='bg-[#080809] border border-border/50 w-full hover:border-neutral-800 rounded-xl'>
+        <AnimationContainer customClassName="bg-card border border-border/50 w-full hover:border-border rounded-xl">
 
             <div className="flex-col items-start p-4 h-full flex lg:p-5">
-                <h4 className="text-lg font-medium text-neutral-100">
+                <h4 className="text-lg font-medium text-foreground">
                     {project?.title}
                 </h4>
-                <p className="mt-4 text-sm text-neutral-300 flex-1">
+                <p className="mt-4 text-sm text-muted-foreground flex-1">
                     {truncateDescription(project?.description)}
                 </p>
                 <div className="flex items-start w-full gap-4 mt-4">

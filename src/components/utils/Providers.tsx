@@ -1,21 +1,43 @@
 "use client";
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import React from 'react';
-import { Toaster } from '../ui/Sonner';
+import { MantineProvider } from "@mantine/core";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ThemeProvider, useTheme } from "next-themes";
+import { ReactNode, useState } from "react";
+import { Toaster } from "../ui/Sonner";
+
+const MantineThemeProvider = ({ children }: { children: ReactNode }) => {
+    const { resolvedTheme } = useTheme();
+    const colorScheme = resolvedTheme === "light" ? "light" : "dark";
+
+    return (
+        <MantineProvider forceColorScheme={colorScheme}>
+            {children}
+        </MantineProvider>
+    );
+};
 
 const Providers = ({
     children
 }: {
-    children: React.ReactNode
+    children: ReactNode
 }) => {
-    const queryClient = new QueryClient();
+    const [queryClient] = useState(() => new QueryClient());
 
     return (
-        <QueryClientProvider client={queryClient}>
-            <Toaster />
-            {children}
-        </QueryClientProvider>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+        >
+            <MantineThemeProvider>
+                <QueryClientProvider client={queryClient}>
+                    <Toaster />
+                    {children}
+                </QueryClientProvider>
+            </MantineThemeProvider>
+        </ThemeProvider>
     )
 };
 

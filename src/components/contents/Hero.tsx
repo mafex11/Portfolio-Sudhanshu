@@ -5,15 +5,15 @@ const Hero = () => {
     return (
         <div className="relative flex flex-col-reverse items-center justify-between w-full py-12 lg:py-16 lg:flex-row">
             <AnimationContainer customClassName="flex flex-col items-center justify-between max-w-lg lg:items-start p-0 lg:pr-8">
-                <h3 className="text-sm lg:text-xl text-white/80">
+                <h3 className="text-sm lg:text-xl text-muted-foreground">
                     Salutations, Code Artist{" "}
-                    <span className="text-white">🚀</span>
+                    <span className="text-foreground">🚀</span>
                 </h3>
-                <h1 className="py-2 text-xl font-bold text-white lg:py-4 sm:text-3xl lg:text-5xl">
+                <h1 className="py-2 text-xl font-bold text-foreground lg:py-4 sm:text-3xl lg:text-5xl">
                     Sudhanshu Pandit
                 </h1>
-                <h3 className="text-base text-center lg:text-start lg:text-lg text-white/80">
-                    <span className="font-medium text-white">
+                <h3 className="text-base text-center lg:text-start lg:text-lg text-muted-foreground">
+                    <span className="font-medium text-foreground">
                         Bridging Code and Design{" "}
                     </span>
                     to build beautiful and functional web applications.

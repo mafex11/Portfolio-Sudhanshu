@@ -1,7 +1,7 @@
 import { FlareCursor, Footer, Header, Providers, TopButton } from "@/components";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import { ColorSchemeScript } from '@mantine/core';
 import "@mantine/core/styles.css";
 import { Inter } from "next/font/google";
 import Head from "./head";
@@ -14,26 +14,28 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={cn(
-            'antialiased min-h-screen transition !bg-[#080809] text-neutral-50 aeonikFont',
-            font.className,
-        )}>
+        <html
+            lang="en"
+            suppressHydrationWarning
+            className={cn(
+                "antialiased min-h-screen aeonikFont",
+                font.className,
+            )}
+        >
 
             <head>
                 <ColorSchemeScript />
                 <Head />
             </head>
 
-            <body className="h-full bg-[#080809] text-neutral-50">
+            <body className="min-h-screen bg-background text-foreground">
 
                 <Providers>
-                    <MantineProvider>
-                        <Header />
-                        <FlareCursor />
-                        {children}
-                        <TopButton />
-                        <Footer />
-                    </MantineProvider>
+                    <Header />
+                    <FlareCursor />
+                    {children}
+                    <TopButton />
+                    <Footer />
                 </Providers>
 
             </body>

@@ -87,10 +87,10 @@ const ContactMe = () => {
         <AnimationContainer customClassName='w-full py-12 lg:py-16'>
 
             <div className="flex-col items-center mb-8 lg:items-start">
-                <h2 className='text-2xl font-bold tracking-tight text-center text-white lg:text-start'>
+                <h2 className='text-2xl font-bold tracking-tight text-center text-foreground lg:text-start'>
                     Get in Touch
                 </h2>
-                <p className="mt-2 font-normal text-center lg:text-start text-neutral-300">
+                <p className="mt-2 font-normal text-center lg:text-start text-muted-foreground">
                     Something on your mind? Feel free to drop me a message.
                 </p>
             </div>
@@ -99,20 +99,20 @@ const ContactMe = () => {
                 <div className="flex flex-col items-center justify-center w-full gap-5 mb-8 lg:flex-row">
                     <Link href="mailto:sudhanshuk1140@gmail.com" className="flex-[0.5] w-full lg:w-auto">
                         <Button type='button' variant="outline" className="flex-col items-start w-full h-auto p-5 hover:scale-100">
-                            <h6 className="text-base font-medium text-white">
+                            <h6 className="text-base font-medium text-foreground">
                                 Email
                             </h6>
-                            <p className="mt-2 text-base text-neutral-300">
+                            <p className="mt-2 text-base text-muted-foreground">
                                 sudhanshuk1140@gmail.com
                             </p>
                         </Button>
                     </Link>
                     <Link href="https://wa.me/+919328261868" className="flex-[0.5] w-full lg:w-auto">
                         <Button type='button' variant="outline" className="flex-col items-start w-full h-auto p-5 hover:scale-100">
-                            <h6 className="text-base font-medium text-white">
+                            <h6 className="text-base font-medium text-foreground">
                                 Phone
                             </h6>
-                            <p className="mt-2 text-base text-neutral-300">
+                            <p className="mt-2 text-base text-muted-foreground">
                                 +91 9328261868
                             </p>
                         </Button>

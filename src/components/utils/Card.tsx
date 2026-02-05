@@ -12,14 +12,14 @@ interface Props {
 
 const Card = ({ project }: Props) => {
     return (
-        <AnimationContainer customClassName='bg-[#080809] border border-border w-full hover:border-neutral-700 rounded-xl'>
+        <AnimationContainer customClassName="bg-card border border-border w-full hover:border-border/80 rounded-xl">
 
             <div className="flex-col items-start p-4 lg:p-5">
                 <div className="flex flex-col items-start space-y-4">
-                    <h4 className="text-lg font-medium text-neutral-100">
+                    <h4 className="text-lg font-medium text-foreground">
                         {project?.title}
                     </h4>
-                    <p className="text-sm text-neutral-300">
+                    <p className="text-sm text-muted-foreground">
                         {project?.description}
                     </p>
                     <div className="flex flex-col lg:flex-row items-start justify-start space-y-4 lg:space-y-0 lg:justify-between w-full">
@@ -31,9 +31,9 @@ const Card = ({ project }: Props) => {
                                     radius="xs"
                                     variant="filled"
                                     color="dark"
-                                    className="transition-colors duration-300 ease-in-out bg-neutral-600/70 hover:bg-neutral-700"
+                                    className="transition-colors duration-300 ease-in-out bg-muted hover:bg-muted/80"
                                 >
-                                    <span className="font-medium text-white">
+                                    <span className="font-medium text-foreground">
                                         {item}
                                     </span>
                                 </Badge>

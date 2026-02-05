@@ -36,7 +36,7 @@ useEffect(() => {
     return (
         <AnimationContainer customClassName='w-full py-12 lg:py-16 relative'>
 
-            <h2 className='mb-8 text-2xl font-bold tracking-tight text-center text-white lg:text-start'>
+            <h2 className='mb-8 text-2xl font-bold tracking-tight text-center text-foreground lg:text-start'>
                 Featured Projects
             </h2>
 

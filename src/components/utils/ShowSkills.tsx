@@ -14,11 +14,11 @@ const ShowSkills = ({ stacks }: Props) => {
                     key={stack}
                     size="lg"
                     radius="sm"
-                    variant="filled"
-                    color="dark"
-                    className="bg-neutral-600/70 hover:bg-neutral-700 transition-colors duration-300 ease-in-out"
+                    variant="outline"
+                    color="gray"
+                    className="bg-muted text-foreground border-border hover:bg-muted/80 transition-colors duration-300 ease-in-out"
                 >
-                    <span className="font-medium text-white">
+                    <span className="font-medium text-foreground">
                         {stack}
                     </span>
                 </Badge>

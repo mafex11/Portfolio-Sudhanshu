@@ -25,7 +25,7 @@ const Heading = ({ title }: Props) => {
             }}
             className="w-full mx-auto mb-8"
         >
-            <h2 className="mb-8 text-4xl md:text-5xl tracking-wide text-white !leading-[1.5] text-center font-semibold capitalize">
+            <h2 className="mb-8 text-4xl md:text-5xl tracking-wide text-foreground !leading-[1.5] text-center font-semibold capitalize">
                 {title}
             </h2>
         </motion.div>
