@@ -34,14 +34,15 @@ const ProjectCarousel = ({ projects }: Props) => {
     return (
         <>
             <div
-                className="relative overflow-hidden"
+                className={`relative ${isPaused ? 'overflow-x-auto scrollbar-hide' : 'overflow-hidden'}`}
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
             >
                 <div
-                    className={`flex gap-6 pb-4 ${isPaused || isModalOpen ? '' : 'animate-scroll'}`}
+                    className="flex gap-6 pb-4 animate-scroll"
                     style={{
                         width: 'max-content',
+                        animationPlayState: isPaused || isModalOpen ? 'paused' : 'running',
                     }}
                 >
                     {duplicatedProjects.map((project, index) => (
