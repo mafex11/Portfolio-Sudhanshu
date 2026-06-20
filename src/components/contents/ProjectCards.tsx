@@ -5,7 +5,7 @@ import { Project as ProjectProps } from '@/types';
 import { useEffect, useState } from 'react';
 import { Skeleton } from '../ui/Skeleton';
 import AnimationContainer from '../utils/AnimationContainer';
-import Card from '../utils/Card';
+import ProjectCardWithPreview from '../utils/ProjectCardWithPreview';
 
 const ProjectCards = () => {
 
@@ -46,7 +46,7 @@ const ProjectCards = () => {
                 ) : (
                     <>
                         {data && data?.map((project: ProjectProps) => (
-                            <Card key={project.title} project={project} />
+                            <ProjectCardWithPreview key={project.title} project={project} />
                         ))}
                     </>
                 )}
