@@ -27,7 +27,7 @@ export const getAbout = async () => {
 export const getProjects = async () => {
     const query = gql`
         query Projects {
-            projectsConnection{
+            projectsConnection(orderBy: publishedAt_DESC) {
                 edges {
                     cursor
                     node {
@@ -39,7 +39,7 @@ export const getProjects = async () => {
                         createdAt
                         publishedAt
                         description
-                        
+
                     }
                 }
             }
