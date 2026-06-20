@@ -18,11 +18,11 @@ const HomeSection = () => {
                 <CurrentFavTech />
                 <CurrentLearnTech />
 
+                <FeaturedProjects />
+
                 <AbuotMe />
 
                 <Experience />
-
-                <FeaturedProjects />
 
                 <MySkills />
 
