@@ -37,23 +37,13 @@ const Experience = () => {
                     </span>
                 </TimeLineItem.Title>
                 <TimeLineItem.Description>
-                Improved website performance by reducing page load times by 80% (from 7s to
-                1.5s) through backend query optimization, caching strategies, and frontend code
-                splitting, directly increasing user engagement and retention.
+                site loaded in 7 seconds. made it load in 1.5. fixed the queries, added caching, split the bundles. users stopped leaving before the page showed up.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
-                Architected and deployed scalable microservices using Docker, AWS ECS, and
-                CI/CD pipelines, reducing release cycles by 30% while improving reliability.
+                set up the infra so deploys stopped being scary. containerized everything, automated the pipeline. releases went from "clear your evening" to "push and forget".
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
-                Implemented AWS monitoring (CloudWatch) and logging (S3/ELK) for
-                performance tracking and analytics, enabling data-driven improvements that increased
-                feature adoption by 15%
-                </TimeLineItem.Description>
-                <TimeLineItem.Description>
-                Built an AI assistant for founders and investors leveraging AWS Lambda + API
-                Gateway to provide tailored recommendations, enhancing decision-making efficiency
-                and adoption rates.
+                built an ai assistant for founders. asks what you need, gives you recommendations. no more digging through dashboards or waiting for someone to reply.
                 </TimeLineItem.Description>
             </TimeLineItem>
             <TimeLineItem>
