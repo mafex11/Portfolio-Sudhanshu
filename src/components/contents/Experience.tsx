@@ -58,11 +58,10 @@ const Experience = () => {
                     </span>
                 </TimeLineItem.Title>
                 <TimeLineItem.Description>
-                Reverse Engineered the API’s of Q-Commerce platforms to create a Crawler system for scraping API’s from
-                Q-Commerce platforms for both Desktop and Mobile platforms which brought in 1000+ new users to the platform.
+                reverse engineered how blinkit, zepto, and friends talk to their apps. built a crawler that scrapes their prices without them noticing. brought in 1000+ users who wanted to stop overpaying for groceries.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
-                Developed features for TolMol App that allows users to search for products and compare prices across different platforms.
+                built the search and compare features for tolmol. you type what you want, it tells you where it&apos;s cheapest. simple, but people really wanted it.
                 </TimeLineItem.Description>
 
             </TimeLineItem>
