@@ -5,14 +5,42 @@ const Experience = () => {
     return (
         <TimeLine>
             <TimeLineItem active>
-                
+
                 <TimeLineItem.Title>
                     <span className="font-medium transition-all hover:text-foreground hover:underline hover:underline-offset-2 text-blue-600">
-                       Software Engineer at BusinessRoom 
+                       Founding AI Engineer at Layerpath
                     </span>
                     {" "}•{" "}
                     <span className="text-muted-foreground">
-                        July 2025 - Now
+                        Nov 2025 - Now
+                    </span>
+                </TimeLineItem.Title>
+                <TimeLineItem.Description>
+                Architected and shipped &quot;Path AI&quot;, a voice-first agentic AI system with a 7-stage FSM
+                (BANT + Four Forces), processing 1,500+ calls/month at 85%+ accuracy and 75% lower cost
+                than human SDRs; built on LiveKit + Pipecat for low-latency, production-grade voice conversations.
+                </TimeLineItem.Description>
+                <TimeLineItem.Description>
+                Designed and shipped Magic Editor, an agentic AI editing assistant for interactive product demos:
+                a multi-tier LLM engine (Gemini + OpenAI) emitting JSON Schema/Zod validated action proposals,
+                vision-grounded copy rewrites, and AI voiceover, wired through a propose &rarr; confirm &rarr; apply pipeline.
+                </TimeLineItem.Description>
+                <TimeLineItem.Description>
+                Architected and built BrandMemory end to end (Next.js, TypeScript, Prisma/PostgreSQL), an AI brand
+                intelligence pipeline integrating Brandfetch and Firecrawl with Gemini models to extract brand voice,
+                tone, and guidelines, with async job orchestration, confidence-scored signal aggregation, and
+                staleness-driven cache invalidation.
+                </TimeLineItem.Description>
+            </TimeLineItem>
+            <TimeLineItem>
+
+                <TimeLineItem.Title>
+                    <span className="font-medium transition-all hover:text-foreground hover:underline hover:underline-offset-2 text-blue-600">
+                       Software Engineer at BusinessRoom
+                    </span>
+                    {" "}•{" "}
+                    <span className="text-muted-foreground">
+                        July 2025 - Oct 2025
                     </span>
                 </TimeLineItem.Title>
                 <TimeLineItem.Description>
