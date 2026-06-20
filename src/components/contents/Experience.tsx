@@ -77,16 +77,10 @@ const Experience = () => {
                 </TimeLineItem.Title>
                 
                 <TimeLineItem.Description>
-                 •   Developed and implemented front-end and back-end solutions for various projects
-                 within OneRoot&apos;s Agri-Tech team, including developing POCs for new features, demonstrating proficiency in full-stack development.
+                first real job. built full-stack features for an agri-tech product that helps farmers find harvesters and get better prices. learned how startups actually ship.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
-                •   Contributed to the development of user-friendly dashboards and successfully
-                integrated third-party tools into existing products, enhancing user experience and system functionality.
-                </TimeLineItem.Description>
-                <TimeLineItem.Description>
-                •   Proactively participated in team meetings and discussions, actively sought feedback,
-                and demonstrated a strong work ethic and a willingness to learn and adapt to new challenges.
+                made dashboards that ops people could actually use. plugged in third-party tools so nobody had to copy-paste between tabs anymore.
                 </TimeLineItem.Description>
             </TimeLineItem>
         </TimeLine>
