@@ -40,7 +40,7 @@ const Experience = () => {
                 site loaded in 7 seconds. made it load in 1.5. fixed the queries, added caching, split the bundles. users stopped leaving before the page showed up.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
-                set up the infra so deploys stopped being scary. containerized everything, automated the pipeline. releases went from "clear your evening" to "push and forget".
+                set up the infra so deploys stopped being scary. containerized everything, automated the pipeline. releases went from &quot;clear your evening&quot; to &quot;push and forget&quot;.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
                 built an ai assistant for founders. asks what you need, gives you recommendations. no more digging through dashboards or waiting for someone to reply.
