@@ -34,6 +34,8 @@ const Head = () => {
             <meta name='twitter:site' content='@mafexuwu' />
             <meta name='twitter:title' content={meta.title} />
             <meta name='twitter:description' content={meta.description} />
+            <link rel='icon' href='/favicon.png' />
+            <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
         </>
     )
 }
