@@ -2,7 +2,7 @@
 
 import { Project } from '@/types';
 import { motion } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 import { SiGithub } from 'react-icons/si';
 import { TbExternalLink } from 'react-icons/tb';
@@ -17,7 +17,28 @@ interface Props {
 const ProjectCarousel = ({ projects }: Props) => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isPaused, setIsPaused] = useState(false);
     const scrollRef = useRef<HTMLDivElement>(null);
+
+    // Auto-scroll effect
+    useEffect(() => {
+        if (isPaused || isModalOpen) return;
+
+        const interval = setInterval(() => {
+            if (scrollRef.current) {
+                const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+                const maxScroll = scrollWidth - clientWidth;
+
+                if (scrollLeft >= maxScroll - 10) {
+                    scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    scrollRef.current.scrollBy({ left: 450, behavior: 'smooth' });
+                }
+            }
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, [isPaused, isModalOpen]);
 
     const openPreview = (project: Project) => {
         setSelectedProject(project);
@@ -52,6 +73,8 @@ const ProjectCarousel = ({ projects }: Props) => {
                 <div
                     ref={scrollRef}
                     className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
                 >
                     {projects.map((project, index) => (
                         <motion.div
@@ -59,13 +82,13 @@ const ProjectCarousel = ({ projects }: Props) => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: index * 0.1 }}
-                            className="flex-shrink-0 w-[350px] lg:w-[400px] snap-start"
+                            className="flex-shrink-0 w-[400px] lg:w-[500px] snap-start"
                         >
                             <div
                                 onClick={() => openPreview(project)}
                                 className="bg-card border border-border rounded-xl overflow-hidden cursor-pointer hover:border-border/80 hover:shadow-lg transition-all group/card"
                             >
-                                <div className="relative w-full h-[220px] lg:h-[250px] bg-muted overflow-hidden">
+                                <div className="relative w-full h-[280px] lg:h-[320px] bg-muted overflow-hidden">
                                     <iframe
                                         src={project.view}
                                         className="w-full h-full border-0 pointer-events-none scale-[0.5] origin-top-left"
