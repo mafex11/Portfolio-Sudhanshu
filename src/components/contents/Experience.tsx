@@ -63,11 +63,11 @@ const Experience = () => {
                 and adoption rates.
                 </TimeLineItem.Description>
             </TimeLineItem>
-            <TimeLineItem last>
-                
+            <TimeLineItem>
+
                 <TimeLineItem.Title>
                     <span className="font-medium transition-all hover:text-foreground hover:underline hover:underline-offset-2 text-blue-600">
-                       Software Developer Engineer Intern at PuntPartners 
+                       Software Developer Engineer Intern at PuntPartners
                     </span>
                     {" "}•{" "}
                     <span className="text-muted-foreground">
@@ -81,24 +81,8 @@ const Experience = () => {
                 <TimeLineItem.Description>
                 Developed features for TolMol App that allows users to search for products and compare prices across different platforms.
                 </TimeLineItem.Description>
-                
-            </TimeLineItem>
 
-            {/* <TimeLineItem active>
-                <TimeLineItem.Title>
-                    <span className="font-medium transition-all hover:text-white hover:underline hover:underline-offset-2 text-blue-600">
-                       FullStack Engineer and AI agents developer freelance
-                    </span>
-                    {" "}•{" "}
-                    <span className="text-neutral-200">
-                        August 2024 - Now
-                    </span>
-                </TimeLineItem.Title>
-                <TimeLineItem.Description>
-                    Working with tech team, helping farmers find harvesters and gain good profit margin by contributing to innovative apps to automate tasks and connect farmer with harvesters and vendors.
-                </TimeLineItem.Description>
-            </TimeLineItem> */}
-        <p className='mt-2'></p>
+            </TimeLineItem>
             <TimeLineItem last>
                 <TimeLineItem.Title>
                     <span className="font-medium transition-all hover:text-foreground hover:underline hover:underline-offset-2 text-blue-600">
