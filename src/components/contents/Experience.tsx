@@ -16,20 +16,13 @@ const Experience = () => {
                     </span>
                 </TimeLineItem.Title>
                 <TimeLineItem.Description>
-                Architected and shipped &quot;Path AI&quot;, a voice-first agentic AI system with a 7-stage FSM
-                (BANT + Four Forces), processing 1,500+ calls/month at 85%+ accuracy and 75% lower cost
-                than human SDRs; built on LiveKit + Pipecat for low-latency, production-grade voice conversations.
+                built path ai, a voice agent that handles 1,500+ sales calls a month. it qualifies leads, talks like a human, and costs 75% less than hiring someone. runs on livekit + pipecat.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
-                Designed and shipped Magic Editor, an agentic AI editing assistant for interactive product demos:
-                a multi-tier LLM engine (Gemini + OpenAI) emitting JSON Schema/Zod validated action proposals,
-                vision-grounded copy rewrites, and AI voiceover, wired through a propose &rarr; confirm &rarr; apply pipeline.
+                shipped magic editor, an ai that rewrites product demos for you. you click, it proposes changes, you approve, done. gemini + openai under the hood, zod to keep it from hallucinating json.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
-                Architected and built BrandMemory end to end (Next.js, TypeScript, Prisma/PostgreSQL), an AI brand
-                intelligence pipeline integrating Brandfetch and Firecrawl with Gemini models to extract brand voice,
-                tone, and guidelines, with async job orchestration, confidence-scored signal aggregation, and
-                staleness-driven cache invalidation.
+                made brandmemory, a pipeline that scrapes your website and figures out your brand voice automatically. feeds into magic editor so the ai sounds like you, not a robot.
                 </TimeLineItem.Description>
             </TimeLineItem>
             <TimeLineItem>
