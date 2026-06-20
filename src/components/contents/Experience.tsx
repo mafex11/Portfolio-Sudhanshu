@@ -19,7 +19,7 @@ const Experience = () => {
                 built path ai, a voice agent that handles 1,500+ sales calls a month. it qualifies leads, talks like a human, and costs 75% less than hiring someone. runs on livekit + pipecat.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
-                shipped magic editor, an ai that rewrites product demos for you. you click, it proposes changes, you approve, done. gemini + openai under the hood, zod to keep it from hallucinating json.
+                shipped magic editor, an ai that edits product demos for you. you click, it proposes changes, you approve, done. gemini + openai under the hood, zod to keep it from hallucinating json.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
                 made brandmemory, a pipeline that scrapes your website and figures out your brand voice automatically. feeds into magic editor so the ai sounds like you, not a robot.
