@@ -11,7 +11,7 @@ const Head = () => {
 
     const meta = {
         title: `Sudhanshu Pandit ${pathname === "/" ? "" : "• " + title.replace(/[-/]/g, " ")}`,
-        description: "I'm a software engineer and a web developer. I love to build things for the web and mobile devices. I love to learn new things and I'm always looking for new challenges.",
+        description: "founding ai engineer. i build voice agents, ship homebrew apps, and mass apply to jobs at 2am. hire me.",
         keywords: "Sudhanshu Pandit, Web Developer, Software Engineer, Full Stack Developer, React, Next.js, Node.js, JavaScript, TypeScript, Tailwind CSS, MongoDB, Express.js, MERN Stack, Prisma, MySQL, Firebase, AWS, GCP, Web Development, Mobile Development, Android, iOS, C, Python, Figma.",
         type: "website",
     };
