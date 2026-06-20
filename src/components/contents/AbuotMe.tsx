@@ -10,7 +10,7 @@ const AbuotMe = () => {
             </h2>
 
             <p className='w-full text-base font-normal leading-7 text-justify text-muted-foreground'>
-                i make voice agents talk and ship homebrew apps at 2am. currently the <strong>founding ai engineer at layerpath</strong>, mass applying to jobs on the side. i like software that works and code that doesn&apos;t make me think. if you&apos;re building something cool, i&apos;m easy to reach.
+                i write code and mass apply because rent and visa wait for no one. currently the <strong>founding ai engineer at layerpath</strong>. good software should feel obvious. bad meetings should not exist. if your codebase is interesting and your team ships fast, let&apos;s talk.
             </p>
 
         </AnimationContainer>
