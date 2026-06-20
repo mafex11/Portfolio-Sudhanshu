@@ -16,13 +16,13 @@ const Experience = () => {
                     </span>
                 </TimeLineItem.Title>
                 <TimeLineItem.Description>
-                built path ai from scratch. voice agent with a 7-stage state machine for sales qualification. livekit for realtime audio, pipecat for orchestration. 1,500+ calls/month in prod, 85% accuracy, 75% cheaper than humans.
+                built path ai. a voice agent that cold calls, qualifies leads, and doesn&apos;t need coffee breaks. 1,500+ calls/month, 85% accuracy, 75% cheaper than hiring someone to get hung up on.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
-                shipped magic editor solo. multi-model pipeline (gemini + openai) that edits product demos through a propose → confirm → apply flow. vision-grounded rewrites, ai voiceover, zod-validated actions so the llm can&apos;t break the ui.
+                shipped magic editor solo. ai that edits your product demos. you click something, it suggests changes, you approve or don&apos;t. no prompt typing, no copy-paste, just point and fix.
                 </TimeLineItem.Description>
                 <TimeLineItem.Description>
-                architected brandmemory end to end. scrapes your site with firecrawl, pulls brand data from brandfetch, runs it through gemini to extract voice and tone. async jobs, confidence scoring, cache invalidation. feeds context into magic editor.
+                made brandmemory. scrapes your site, figures out how your brand talks, and feeds that into magic editor so the ai sounds like you instead of a linkedin influencer.
                 </TimeLineItem.Description>
             </TimeLineItem>
             <TimeLineItem>
