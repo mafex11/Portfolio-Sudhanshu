@@ -8,30 +8,27 @@ import { useEffect, useState } from 'react';
 import { IoArrowForward } from "react-icons/io5";
 import { Button } from '../ui/Button';
 import AnimationContainer from '../utils/AnimationContainer';
-import Project from '../utils/Project';
+import ProjectCarousel from './ProjectCarousel';
 
 const FeaturedProjects = () => {
 
     const [projects, setProjects] = useState<ProjectProps[]>([]);
-
     const [error, setError] = useState<string | null>(null);
 
-useEffect(() => {
-    const fetchProjects = async () => {
-        try {
-            const data = await getProjects();
-            setProjects(data);
-        } catch (error) {
-            console.error("Failed to fetch projects:", error);
-            setError("Failed to load projects. Please try again later.");
-        }
-    };
-    fetchProjects();
-}, []);
-
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const data = await getProjects();
+                setProjects(data);
+            } catch (error) {
+                console.error("Failed to fetch projects:", error);
+                setError("Failed to load projects. Please try again later.");
+            }
+        };
+        fetchProjects();
+    }, []);
 
     const data = projects?.map((item: any) => item.node);
-
 
     return (
         <AnimationContainer customClassName='w-full py-12 lg:py-16 relative'>
@@ -62,11 +59,9 @@ useEffect(() => {
                 className="bg-violet-500/10 hidden lg:block -z-10 w-[30rem] left-[-5rem] bottom-[8rem] absolute h-[18rem] blur-[10rem] rounded-full"
             />
 
-            <div className="z-20 grid w-full grid-cols-1 gap-4 mx-auto lg:gap-5 sm:grid-cols-2">
-                {data && data?.slice(0, 4)?.map((project: ProjectProps) => (
-                    <Project key={project.title} project={project} />
-                ))}
-            </div>
+            {data && data.length > 0 && (
+                <ProjectCarousel projects={data} />
+            )}
 
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
