@@ -299,3 +299,17 @@ option {
 .custom-shadow {
   box-shadow: rgba(59, 130, 246, 0.3) 5px 5px;
 }
+
+/* Project carousel continuous scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}

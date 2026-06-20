@@ -2,8 +2,7 @@
 
 import { Project } from '@/types';
 import { motion } from 'framer-motion';
-import { useState, useRef, useEffect } from 'react';
-import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
+import { useState } from 'react';
 import { SiGithub } from 'react-icons/si';
 import { TbExternalLink } from 'react-icons/tb';
 import { Button } from '../ui/Button';
@@ -18,27 +17,6 @@ const ProjectCarousel = ({ projects }: Props) => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
-    const scrollRef = useRef<HTMLDivElement>(null);
-
-    // Auto-scroll effect
-    useEffect(() => {
-        if (isPaused || isModalOpen) return;
-
-        const interval = setInterval(() => {
-            if (scrollRef.current) {
-                const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-                const maxScroll = scrollWidth - clientWidth;
-
-                if (scrollLeft >= maxScroll - 10) {
-                    scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    scrollRef.current.scrollBy({ left: 450, behavior: 'smooth' });
-                }
-            }
-        }, 4000);
-
-        return () => clearInterval(interval);
-    }, [isPaused, isModalOpen]);
 
     const openPreview = (project: Project) => {
         setSelectedProject(project);
@@ -50,33 +28,23 @@ const ProjectCarousel = ({ projects }: Props) => {
         setSelectedProject(null);
     };
 
-    const scroll = (direction: 'left' | 'right') => {
-        if (scrollRef.current) {
-            const scrollAmount = 400;
-            scrollRef.current.scrollBy({
-                left: direction === 'left' ? -scrollAmount : scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-    };
+    // Duplicate projects for seamless loop
+    const duplicatedProjects = [...projects, ...projects];
 
     return (
         <>
-            <div className="relative group">
-                <button
-                    onClick={() => scroll('left')}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-card border border-border shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-muted -translate-x-1/2"
-                >
-                    <IoChevronBack className="w-5 h-5 text-foreground" />
-                </button>
-
+            <div
+                className="relative overflow-hidden"
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+            >
                 <div
-                    ref={scrollRef}
-                    className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
+                    className={`flex gap-6 pb-4 ${isPaused || isModalOpen ? '' : 'animate-scroll'}`}
+                    style={{
+                        width: 'max-content',
+                    }}
                 >
-                    {projects.map((project, index) => (
+                    {duplicatedProjects.map((project, index) => (
                         <motion.div
                             key={project.title}
                             initial={{ opacity: 0, y: 20 }}
@@ -128,13 +96,6 @@ const ProjectCarousel = ({ projects }: Props) => {
                         </motion.div>
                     ))}
                 </div>
-
-                <button
-                    onClick={() => scroll('right')}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-card border border-border shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-muted translate-x-1/2"
-                >
-                    <IoChevronForward className="w-5 h-5 text-foreground" />
-                </button>
             </div>
 
             <ProjectPreviewModal
