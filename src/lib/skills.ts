@@ -1,15 +1,15 @@
 export const skills = [
     {
         title: 'Languages',
-        stack: ["HTML", "CSS", "JavaScript", "TypeScript", "C", "C++", "Python"],
+        stack: ["JavaScript", "TypeScript", "Python", "Rust", "Swift", "Java", "C", "C++", "SQL"],
     },
     {
         title: "Frontend Frameworks",
-        stack: ["React", "Next.js", "React Native", ],
+        stack: ["React", "Next.js", "React Native"],
     },
     {
         title: "Javascript Libraries",
-        stack: ["React Query", "Emotion", "Axios", ]
+        stack: ["React Query", "Emotion", "Axios"]
     },
     {
         title: "CSS Styling & Motion Libraries",
@@ -17,11 +17,19 @@ export const skills = [
     },
     {
         title: "Backend Technologies",
-        stack: ["Node.js", "Express.js", "Mongoose", "Prisma", "GraphQL"],
+        stack: ["Node.js", "Express.js", "Django", "Prisma", "Mongoose", "GraphQL"],
+    },
+    {
+        title: "AI & Voice",
+        stack: ["OpenAI", "Gemini", "LiveKit", "Pipecat", "TensorFlow", "Firecrawl"],
     },
     {
         title: "Databases",
-        stack: ["MongoDB", "Firebase", "PostgreSQL", "MySQL"],
+        stack: ["PostgreSQL", "MongoDB", "MySQL", "Firebase"],
+    },
+    {
+        title: "Cloud & DevOps",
+        stack: ["AWS", "Docker", "AWS ECS", "AWS Lambda", "CloudWatch", "CI/CD"],
     },
     {
         title: "Software & Tools",
@@ -29,6 +37,6 @@ export const skills = [
     },
     {
         title: "Currently Learning & Exploring",
-        stack: ["Vite", "Eslint", "Socket.io", "Docker", "AWS", "React Testing Library", "Tailwind JIT"]
+        stack: ["Kubernetes", "Vector Databases", "Model Fine-tuning", "Distributed Systems"]
     }
 ];
