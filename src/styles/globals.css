@@ -91,23 +91,27 @@
 
 * {
   font-family: "Inter", sans-serif;
-  cursor: none;
 }
 
 html,
 body {
   scroll-behavior: smooth;
-  /* cursor: none !important; */
 }
 
-a,
-button,
-input,
-textarea,
-select,
-label,
-option {
-  cursor: none !important;
+@media (pointer: fine) {
+  * {
+    cursor: none;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  label,
+  option {
+    cursor: none !important;
+  }
 }
 
 .flare {

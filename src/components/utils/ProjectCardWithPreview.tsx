@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { SiGithub } from "react-icons/si";
 import { TbExternalLink } from "react-icons/tb";
 import { Button } from '../ui/Button';
+import LazyIframe from '../ui/LazyIframe';
 import AnimationContainer from './AnimationContainer';
 import ProjectPreviewModal from '../ui/ProjectPreviewModal';
 
@@ -23,12 +24,11 @@ const ProjectCardWithPreview = ({ project }: Props) => {
                     className="relative w-full h-[300px] lg:h-[400px] bg-muted overflow-hidden cursor-pointer group"
                     onClick={() => setIsModalOpen(true)}
                 >
-                    <iframe
+                    <LazyIframe
                         src={project?.view}
-                        className="w-full h-full border-0 pointer-events-none scale-[0.5] origin-top-left"
-                        style={{ width: '200%', height: '200%' }}
                         title={`Preview of ${project?.title}`}
-                        loading="lazy"
+                        className="w-full h-full pointer-events-none scale-[0.5] origin-top-left"
+                        style={{ width: '200%', height: '200%' }}
                     />
                     <div className="absolute inset-0 bg-transparent group-hover:bg-background/10 transition-colors flex items-center justify-center">
                         <span className="opacity-0 group-hover:opacity-100 transition-opacity text-sm font-medium text-foreground bg-card/90 px-4 py-2 rounded-lg border border-border">
