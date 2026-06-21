@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { BsArrowUpShort } from "react-icons/bs";
-import { Button } from '../ui/Button';
+import Glass from '../ui/Glass';
 
 const TopButton = () => {
 
@@ -45,14 +45,16 @@ const TopButton = () => {
                     isVisible ? "visible" : "hidden",
                 )}
             >
-                <Button
-                    variant="outline"
-                    size="icon"
+                <Glass
+                    as="button"
                     onClick={handleScroll}
-                    className="rounded-full"
+                    aria-label="Scroll to top"
+                    backdropBlur={5}
+                    displacementScale={40}
+                    className="flex items-center justify-center w-10 h-10 rounded-full shadow-lg shadow-black/10 transition-transform active:scale-90 dark:shadow-black/50"
                 >
-                    <BsArrowUpShort className="w-6 h-6" />
-                </Button>
+                    <BsArrowUpShort className="w-6 h-6 text-foreground" />
+                </Glass>
             </motion.div>
         </AnimatePresence>
     )

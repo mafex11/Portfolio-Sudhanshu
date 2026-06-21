@@ -6,6 +6,7 @@ import { IoClose } from 'react-icons/io5';
 import { TbExternalLink } from 'react-icons/tb';
 import { SiGithub } from 'react-icons/si';
 import { Button } from './Button';
+import Glass from './Glass';
 import Link from 'next/link';
 
 interface Props {
@@ -36,7 +37,12 @@ const ProjectPreviewModal = ({ project, isOpen, onClose }: Props) => {
                         className="relative w-full max-w-5xl h-[80vh] bg-card border border-border rounded-xl overflow-hidden shadow-2xl"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <div className="flex items-center justify-between p-4 border-b border-border bg-card">
+                        <Glass
+                            backdropBlur={6}
+                            displacementScale={30}
+                            glassBorder={false}
+                            className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between p-4 border-b border-border/50"
+                        >
                             <div className="flex items-center gap-4">
                                 <h3 className="text-lg font-medium text-foreground">
                                     {project.title}
@@ -58,12 +64,12 @@ const ProjectPreviewModal = ({ project, isOpen, onClose }: Props) => {
                             </div>
                             <button
                                 onClick={onClose}
-                                className="p-2 rounded-lg hover:bg-muted transition-colors"
+                                className="p-2 rounded-lg hover:bg-muted/60 transition-colors"
                             >
                                 <IoClose className="w-5 h-5 text-muted-foreground" />
                             </button>
-                        </div>
-                        <div className="w-full h-[calc(100%-65px)] bg-muted">
+                        </Glass>
+                        <div className="w-full h-full bg-muted">
                             <iframe
                                 src={project.view}
                                 className="w-full h-full border-0"

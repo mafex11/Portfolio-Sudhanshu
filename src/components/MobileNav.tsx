@@ -6,6 +6,7 @@ import { Squeeze as Hamburger } from 'hamburger-react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import Glass from './ui/Glass';
 import ThemeToggle from './ui/ThemeToggle';
 
 const MobileNav = () => {
@@ -35,7 +36,13 @@ const MobileNav = () => {
     const iconColor = resolvedTheme === "light" ? "#0f172a" : "#ffffff";
 
     return (
-        <nav className="fixed top-0 left-0 right-0 flex w-full h-16 bg-background/80 backdrop-blur-md lg:hidden">
+        <nav className="fixed top-0 left-0 right-0 flex w-full h-16 lg:hidden z-[9990]">
+            <Glass
+                backdropBlur={4}
+                displacementScale={40}
+                glassBorder={false}
+                className="absolute inset-0 w-full h-full"
+            />
             <div className="relative flex items-center justify-between w-full px-5">
 
                 <Link href="/">

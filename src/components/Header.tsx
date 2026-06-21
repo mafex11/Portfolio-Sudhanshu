@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import MobileNav from './MobileNav';
+import Glass from './ui/Glass';
 import ThemeToggle from './ui/ThemeToggle';
 
 const Header = () => {
@@ -20,7 +21,7 @@ const Header = () => {
     return (
         <header className="z-[99999] relative">
 
-            {/* Navbar Background */}
+            {/* Navbar Background — Liquid Glass */}
             <motion.div
                 initial={{ y: -100, opacity: 0, x: "-50%" }}
                 animate={{ y: 0, opacity: 1, x: "-50%" }}
@@ -30,18 +31,12 @@ const Header = () => {
                     damping: 20,
                     duration: 0.7,
                 }}
-                className="fixed top-0 -translate-x-1/2 w-full h-16 bg-background/80 border border-border/50 rounded-none shadow-lg left-1/2 shadow-black/10 backdrop-blur-md sm:top-6 sm:h-12 sm:w-[32rem] sm:rounded-full mx-auto overflow-hidden hidden lg:inline-block dark:shadow-black/50"
+                className="fixed top-0 -translate-x-1/2 w-full left-1/2 sm:top-6 sm:w-[32rem] mx-auto hidden lg:block z-[9990]"
             >
-                <motion.div
-                    initial={{ opacity: 0, x: "-50%" }}
-                    animate={{ opacity: 1, x: "-50%" }}
-                    transition={{
-                        type: "spring",
-                        stiffness: 260,
-                        damping: 20,
-                        duration: 0.4,
-                    }}
-                    className="absolute bottom-0 -translate-x-1/2 w-full h-4 bg-gradient-to-b hidden from-violet-200/30 rounded-full blur left-1/2 sm:h-2 sm:w-[35rem] mx-auto"
+                <Glass
+                    backdropBlur={4}
+                    displacementScale={50}
+                    className="w-full h-16 rounded-none shadow-lg shadow-black/10 sm:h-12 sm:rounded-full dark:shadow-black/50"
                 />
             </motion.div>
 
